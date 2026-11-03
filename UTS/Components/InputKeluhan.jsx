@@ -51,7 +51,7 @@ const InputKeluhan = ({ onTambahKeluhan }) => {
         onChangeText={setKeluhanText}
       />
 
-      <TombolKeluhan/>
+      <TombolKeluhan klikTambahKeluhan={klikKirim} />
     </View>
   );
 };

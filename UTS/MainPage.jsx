@@ -63,7 +63,7 @@ const MainPage = () => {
           <InputKeluhan onTambahKeluhan={tambahKeluhanBaru} />
         </View>
 
-        <View style={{ paddingHorizontal: 15 }}>
+        <View style={{ backgroundColor: "#7caa7d", paddingHorizontal: 15, paddingBottom: 150 }}>
           {listKeluhan.map((item) => (
             <View
               key={item.id}
@@ -71,7 +71,7 @@ const MainPage = () => {
                  backgroundColor: "#fcf6cf",
                 padding: 14,
                 borderRadius: 8,
-                marginBottom: 150,
+                marginBottom: 10,
                 borderWidth: 1,
                 borderColor: "#E2E8F0",
                 flexDirection: "row",

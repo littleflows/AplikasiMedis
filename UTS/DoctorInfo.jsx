@@ -15,27 +15,24 @@ const DoctorInfo = ({ dataDokter, status }) => {
       }}
     >
       <View style={{ width: '100%' }}>
-        {/* BAGIAN ATAS: Foto dan Informasi Dokter */}
         <View
           style={{
-            flexDirection: 'row', // Menyejajarkan foto (kiri) dan teks kontainer (kanan)
+            flexDirection: 'row',
             alignItems: 'flex-start',
             marginBottom: 12,
           }}
         >
-          {/* 1. FOTO DOKTER */}
           <Image
             source={{ uri: dataDokter.ppDokter }}
             style={{
               width: 60,
               height: 60,
-              borderRadius: 30, // Membuat lingkaran sempurna
-              marginRight: 12, // Memberikan jarak ke teks di kanannya
-              backgroundColor: '#E2E8F0', // Warna cadangan saat loading gambar
+              borderRadius: 30,
+              marginRight: 12,
+              backgroundColor: '#E2E8F0',
             }}
           />
 
-          {/* 2. KONTAINER TEKS (Nama, Spesialis, RS) */}
           <View style={{ flex: 1 }}>
             <View
               style={{
@@ -49,14 +46,13 @@ const DoctorInfo = ({ dataDokter, status }) => {
                   fontSize: 16,
                   fontWeight: 'bold',
                   color: '#111111',
-                  flex: 1, // Agar nama panjang tidak menabrak status aktif
+                  flex: 1,
                   marginRight: 8,
                 }}
               >
                 {dataDokter.nama}, {dataDokter.gelar}
               </Text>
 
-              {/* STATUS AKTIF */}
               <View
                 style={{
                   backgroundColor: '#e6f7f2',
@@ -90,8 +86,7 @@ const DoctorInfo = ({ dataDokter, status }) => {
             </Text>
           </View>
         </View>
-
-        {/* BAGIAN BAWAH: Informasi Poli & Jam Praktik */}
+        
         <View
           style={{
             flexDirection: 'row',
