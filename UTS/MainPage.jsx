@@ -1,19 +1,14 @@
 import { View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
-import NavHeader from "./Components/NavHeader";
 import DoctorInfo from "./DoctorInfo";
 import AntrianPasien from "./Components/AntrianPasien";
 import InputKeluhan from "./Components/InputKeluhan";
 import React from "react";
 
 const MainPage = () => {
-  const fotoDokter = {
-    Url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFz-U4CMIuVb8uMPYTo_rFt0AK3n8mufdRzVHLbp7Wz-fewPsnquV0XYJo&s=10",
-  };
-  const [FotoDokter, setFotoDokter] = useState(fotoDokter);
-
   const dataDokter = {
+    ppDokter: "https://png.pngtree.com/png-vector/20250415/ourmid/pngtree-female-doctor-portrait-in-white-png-image_15971053.png",
     nama: "Aisyah Putri",
     gelar: "Sp.Ort",
     spesialis: "Spesialis Ortodonsia",
@@ -52,13 +47,8 @@ const MainPage = () => {
   };
 
   return (
-    <SafeAreaView>
-      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
-        <View style={{ height: 70, justifyContent: "center" }}>
-          <NavHeader fotoDokter={FotoDokter} />
-        </View>
-
-        <View style={{ paddingHorizontal: 15, marginBottom: 15 }}>
+    <SafeAreaView style={{backgroundColor: "#7caa7d" }}>
+          <View style={{ paddingHorizontal: 15, marginBottom: 20 }}>
           <DoctorInfo dataDokter={DataDokter} status={StatusPraktik} />
         </View>
 
@@ -78,10 +68,10 @@ const MainPage = () => {
             <View
               key={item.id}
               style={{
-                backgroundColor: "#ffffff",
+                 backgroundColor: "#fcf6cf",
                 padding: 14,
                 borderRadius: 8,
-                marginBottom: 8,
+                marginBottom: 150,
                 borderWidth: 1,
                 borderColor: "#E2E8F0",
                 flexDirection: "row",
@@ -104,7 +94,6 @@ const MainPage = () => {
             </View>
           ))}
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 };

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Text, View, TextInput, Button } from "react-native";
+import { Text, View, TextInput } from "react-native";
+import TombolKeluhan from './TombolTambahKeluhan'
 
 const InputKeluhan = ({ onTambahKeluhan }) => {
   const [keluhanText, setKeluhanText] = useState("");
 
-  const handleKirim = () => {
+  const klikKirim = () => {
     if (keluhanText.trim() === "") return;
 
     onTambahKeluhan(keluhanText);
@@ -16,7 +17,7 @@ const InputKeluhan = ({ onTambahKeluhan }) => {
     <View
       style={{
         padding: 16,
-        backgroundColor: "#FFFFFF",
+        backgroundColor: '#fffce9',
         borderRadius: 12,
         borderWidth: 1,
         borderColor: "#E2E8F0",
@@ -50,7 +51,7 @@ const InputKeluhan = ({ onTambahKeluhan }) => {
         onChangeText={setKeluhanText}
       />
 
-      <Button title="Tambah Layanan" color="#006b44" onPress={handleKirim} />
+      <TombolKeluhan/>
     </View>
   );
 };

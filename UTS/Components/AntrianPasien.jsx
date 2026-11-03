@@ -14,7 +14,7 @@ const AntrianPasienComponent = ({ NoAntrianPasien, setNoAntrianPasien }) => {
   return (
     <View
       style={{
-        backgroundColor: "#ffffff",
+        backgroundColor: '#fffce9',
         width: "100%",
         maxWidth: 600,
         padding: 20,
